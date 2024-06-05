@@ -6,7 +6,7 @@ class Gmaps extends CI_Controller {
 
     public function index()
     {
-        $location = array(
+        $location['location'] = array(
             array(
                 "nama" => "Lokasi A",
                 "lat" => -8.671071,
@@ -33,6 +33,7 @@ class Gmaps extends CI_Controller {
                 "long" => 115.188086
             ),
         );
+        $this->load->view('gmaps', $location);
     }
 
 }
